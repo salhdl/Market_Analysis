@@ -23,11 +23,10 @@ Rapport HTML “newsletter-ready” + export PDF (optionnel)
 
 Code monofichier : facile à lire, modifier et déployer
 
-🧱 Architecture (vue rapide)
-java
-Copier
-Modifier
+# 🧱 Architecture (vue rapide)
+
 streamlit_market_analysis_agents.py
+
 ├── Agents Agno
 │   ├── NeighborhoodAnalyzerAgent → tool: locallogic_scores
 │   ├── InvestmentCalculatorBot    → tool: rental_investment_metrics
@@ -35,14 +34,17 @@ streamlit_market_analysis_agents.py
 ├── Modèles Pydantic (inputs)
 ├── Outils "compute_*" (mocked, remplaçables par API réelles)
 └── UI Streamlit (3 onglets)
-Les 3 agents
-NeighborhoodAnalyzerAgent
+
+
+
+# Les 3 agents
+- NeighborhoodAnalyzerAgent
 Analyse un secteur (lat/lon), renvoie des scores d’aménités, tuiles de carte mockées et un profil d’acheteur.
 
-InvestmentCalculatorBot
+- InvestmentCalculatorBot
 À partir d’un CSV de loyers comparables, calcule NOI, cap rate, cash-on-cash, flux et table de sensibilité (taux vs loyers).
 
-MarketReporterAgent
+- MarketReporterAgent
 Génère un HTML brandé (KPIs, période, ranking d’agents) et un PDF (si reportlab installé).
 
 🚀 Démarrage rapide
